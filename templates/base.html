@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Duo Propag{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/redes.css') }}">
+  <!-- Aqui podes adicionar outros CSS partilhados -->
+</head>
+<body class="bg-[#ECEBE7] text-[#2C2C2C] font-sans">
+
+  {% include 'partials/header.html' %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'partials/footer.html' %}
+
+</body>
+</html>
