@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>TV Digital - Publicidade Inteligente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  {% include 'partials/header.html' %}
+
+  <main class="container py-5">
+
+    <!-- Título -->
+    <h1 class="text-center mb-4">TVs Publicitárias Inteligentes</h1>
+
+<section class="mb-5 py-4 tv-intro">
+  <div class="row align-items-center g-4">
+
+    <!-- Coluna de Texto -->
+    <div class="col-lg-6">
+      <h2 class="mb-3">Potencie o seu Negócio com TV Publicitária Inteligente 📺✨</h2>
+      <p class="fs-5">
+        Dê uma nova vida ao seu espaço comercial transformando a sua TV numa <strong>poderosa ferramenta de marketing visual</strong>. 
+        Apresente promoções, menus digitais, vídeos promocionais e anúncios dinâmicos com atualização remota e imediata.
+      </p>
+      <p class="fs-5">
+        Ideal para espaços comerciais como:
+      </p>
+      <ul class="list-group list-group-flush mb-3 fs-5">
+        <li class="list-group-item">☕ Cafés e Restaurantes</li>
+        <li class="list-group-item">🏋️‍♀️ Ginásios e Estúdios de Fitness</li>
+        <li class="list-group-item">🏥 Clínicas e Consultórios</li>
+        <li class="list-group-item">🏪 Lojas e Centros Comerciais</li>
+        <li class="list-group-item">🏨 Hotéis e Espaços de Acolhimento</li>
+      </ul>
+      <p class="fs-5">
+        <strong>Instalação rápida</strong>, gestão de conteúdos simples e resultados visíveis desde o primeiro dia.  
+        Aproveite melhor o seu espaço comercial e comunique eficazmente com os seus clientes!
+      </p>
+    </div>
+
+    <!-- Coluna da Imagem -->
+    <div class="col-lg-6 text-center">
+      <img 
+        src="{{ url_for('static', filename='img/tv-publicidade.jpg') }}" 
+        alt="TV Publicitária Inteligente" 
+        class="img-fluid rounded shadow-lg"
+        style="max-height: 400px; object-fit: cover;">
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Benefícios -->
+    <section class="mb-5">
+      <h2 class="text-center mb-4">Vantagens para o seu negócio</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm text-center">
+            <i class="fas fa-bullhorn fa-2x text-primary mb-3"></i>
+            <h5>Maior visibilidade</h5>
+            <p>Exiba os seus produtos, promoções ou serviços diretamente aos seus clientes no local.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm text-center">
+            <i class="fas fa-tv fa-2x text-success mb-3"></i>
+            <h5>Rentabilize o espaço</h5>
+            <p>Ganhe comissões ao divulgar publicidade de outras marcas no seu ecrã.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm text-center">
+            <i class="fas fa-plug fa-2x text-warning mb-3"></i>
+            <h5>Instalação simples</h5>
+            <p>Sem complicações. Ligamos o dispositivo, configuramos remotamente e está pronto a funcionar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+   <section class="mb-5">
+  <h2 class="text-center mb-4">Pacotes de Instalação</h2>
+  <div class="row g-4">
+    <!-- Básico -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h3 class="card-title">Plano Básico</h3>
+          <p class="fs-5 text-muted">120€ único</p>
+          <ul class="list-unstyled">
+            <li>✅ Dispositivo de gestão de anúncios incluído</li>
+            <li>✅ Ligação à sua TV atual</li>
+            <li>✅ Formação e suporte inicial</li>
+            <li>✅ Atualização de conteúdos à distância</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intermédio -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center border-primary">
+        <div class="card-body">
+          <h3 class="card-title">Plano Intermédio</h3>
+          <p class="fs-5 text-muted">350€ único</p>
+          <ul class="list-unstyled">
+            <li>✅ TV 32" nova incluída</li>
+            <li>✅ Dispositivo de gestão instalado</li>
+            <li>✅ Instalação e configuração completa</li>
+            <li>✅ Atualizações mensais automáticas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center bg-warning-subtle border-warning">
+        <div class="card-body">
+          <h3 class="card-title">Instalação Premium</h3>
+          <p class="fs-5 text-muted">550€ único</p>
+          <ul class="list-unstyled">
+            <li>✅ TV 43" Full HD incluída</li>
+            <li>✅ Suporte de parede</li>
+            <li>✅ Dispositivo profissional de gestão</li>
+            <li>✅ Formação, manutenção e assistência</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="my-5">
+  <h2 class="text-center mb-4">Modelos de Utilização da TV</h2>
+
+  <div class="row g-4">
+
+    <!-- Publicidade Partilhada -->
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="mb-3"><i class="fas fa-hand-holding-usd text-success me-2"></i>Modelo com Publicidade Partilhada</h4>
+        <p>O comerciante cede o espaço da TV para exibição de publicidade de marcas locais e nacionais. Em troca, recebe uma comissão mensal por cada painel ativo.</p>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item">📺 Exibição de conteúdos de várias marcas</li>
+          <li class="list-group-item">💰 Ganhos mensais: até 15€/painel</li>
+          <li class="list-group-item">📦 Gestão remota incluída</li>
+          <li class="list-group-item">🎁 Bónus por indicar novos espaços</li>
+        </ul>
+        <p><strong>Ideal para cafés, ginásios, restaurantes ou espaços com muito público.</strong></p>
+      </div>
+    </div>
+
+    <!-- Publicidade Exclusiva -->
+    <div class="col-md-6">
+      <div class="p-4 bg-white rounded shadow-sm h-100">
+        <h4 class="mb-3"><i class="fas fa-star text-warning me-2"></i>Modelo de Uso Exclusivo</h4>
+        <p>O comerciante utiliza a TV apenas para fins próprios: mostrar o menu digital, promoções, eventos ou redes sociais.</p>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item">🎨 Criação personalizada de conteúdos (menu, imagens, vídeos)</li>
+          <li class="list-group-item">🖥️ TV dedicada ao seu negócio</li>
+          <li class="list-group-item">🔄 Atualizações mensais de conteúdos</li>
+          <li class="list-group-item">💼 Custo mensal: <strong>25€/mês</strong></li>
+          <li class="list-group-item">🎬 Criação de conteúdos: desde <strong>30€ por pedido</strong></li>
+        </ul>
+        <p><strong>Ideal para negócios que querem destacar apenas os seus produtos com design apelativo.</strong></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+
+  {% include 'partials/footer.html' %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

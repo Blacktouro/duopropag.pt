@@ -1,0 +1,106 @@
+/* Fundo geral e fontes */
+body {
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Títulos principais */
+h2 {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Subtítulos */
+h3 {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Cartões */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Destaque nos cartões especiais */
+.bg-warning-subtle {
+  background-color: #fff3cd !important;
+}
+
+.border-warning {
+  border-color: #ffc107 !important;
+}
+
+/* Listas internas dos planos */
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.card ul li {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Inputs */
+input[type="password"] {
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="password"]:focus {
+  border: 2px solid #ff6600;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+}
+
+/* Botões */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Área sócio */
+#socio-info {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade adicional */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  input[type="password"] {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

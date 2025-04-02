@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Inicial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      font-weight: 700;
+      color: #222;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .video-section video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-slider {
+      display: flex;
+      gap: 50px;
+      animation: slide 20s linear infinite;
+    }
+
+    .partner-logos {
+      overflow: hidden;
+      background-color: #fff;
+      padding: 20px 0;
+    }
+
+    .partner-slider img {
+      height: 60px;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .partner-slider img:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      h2 { font-size: 1.6rem; }
+      .fs-5, .fs-4 { font-size: 1rem !important; }
+      .partner-slider { gap: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  {% include 'partials/header.html' %}
+
+  <main class="container">
+
+    <!-- INTRODUÇÃO -->
+    <section class="text-center">
+      <h1 class="mb-3">Bem-vindo à <strong>Publicidade Inteligente</strong></h1>
+      <p class="fs-5">Soluções digitais com impacto real para marcas e empresas locais.</p>
+    </section>
+
+    <!-- PORQUE O MARKETING É ESSENCIAL -->
+    <section>
+      <div class="section-title">
+        <h2>📢 Por que o Marketing Digital é Essencial</h2>
+      </div>
+      <p class="text-center fs-5">
+        Mesmo os pequenos negócios precisam de presença digital para atrair novos clientes, destacar-se da concorrência e crescer com consistência.
+      </p>
+    </section>
+
+    <!-- INVESTIR SENDO PEQUENO -->
+    <section class="bg-light rounded shadow-sm px-4">
+      <div class="section-title">
+        <h2>💡 Por que investir mesmo com um negócio pequeno?</h2>
+      </div>
+      <ul class="fs-5">
+        <li>✅ Fortalece a marca e aumenta a credibilidade</li>
+        <li>✅ Permite alcançar mais pessoas online</li>
+        <li>✅ Investimento escalável, começa pequeno e cresce</li>
+        <li>✅ Comunica promoções e diferencia-se do mercado</li>
+      </ul>
+    </section>
+
+    <!-- O QUE FAZEMOS -->
+    <section>
+      <div class="section-title">
+        <h2>🔧 O que fazemos</h2>
+      </div>
+      <p class="fs-5 text-center">
+        Criamos landing pages, logótipos, campanhas Google Ads, SEO local, design para redes sociais e instalamos TVs publicitárias em espaços comerciais.<br>
+        <strong>O nosso foco:</strong> resultados reais com simplicidade e profissionalismo.
+      </p>
+    </section>
+
+    <!-- NOSSA HISTÓRIA -->
+    <section class="bg-white border rounded p-4 shadow-sm">
+      <div class="section-title">
+        <h2>🧱 A nossa história</h2>
+      </div>
+      <p class="fs-5">
+        Começámos com um painel publicitário num pequeno café. A resposta foi tão positiva que percebemos o potencial. Hoje, ajudamos negócios locais a crescer com soluções acessíveis e eficazes.
+      </p>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section>
+      <div class="section-title">
+        <h2>👥 Quem Somos</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h4>André Morgado</h4>
+            <p>Técnico de informática, gestor de sistemas e programador. Cuido de toda a parte técnica, estrutura web e infraestrutura de exibição.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h4>Kaio Webert</h4>
+            <p>Especialista em design gráfico, Adobe Photoshop e branding. Responsável pela imagem visual, redes sociais e material de comunicação criativo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VÍDEO INSTITUCIONAL -->
+    <section class="video-section text-center">
+      <div class="section-title">
+        <h2>🎥 Veja o que fazemos</h2>
+      </div>
+      <video controls autoplay muted loop>
+        <source src="{{ url_for('static', filename='video/apresentacao.mp4') }}" type="video/mp4">
+        O seu navegador não suporta vídeo HTML5.
+      </video>
+    </section>
+
+    <!-- PARCEIROS -->
+    <section class="partner-logos">
+      <div class="container">
+        <div class="partner-slider d-flex align-items-center">
+          <img src="{{ url_for('static', filename='img/parceiro1.png') }}" alt="Parceiro 1">
+          <img src="{{ url_for('static', filename='img/parceiro2.png') }}" alt="Parceiro 2">
+          <img src="{{ url_for('static', filename='img/parceiro3.png') }}" alt="Parceiro 3">
+          <img src="{{ url_for('static', filename='img/parceiro4.png') }}" alt="Parceiro 4">
+          <img src="{{ url_for('static', filename='img/parceiro1.png') }}" alt="Parceiro 1"> <!-- repete para efeito loop -->
+          <img src="{{ url_for('static', filename='img/parceiro2.png') }}" alt="Parceiro 2">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'partials/footer.html' %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
